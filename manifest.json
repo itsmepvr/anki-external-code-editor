@@ -1,0 +1,9 @@
+{
+  "name": "Copy, Edi & Run Code from External Editor",
+  "package": "Copy, Edit and Run code from external editor",
+  "ankiweb_id": "",
+  "author": "Venkata Ramana P",
+  "version": "v0.0.2",
+  "homepage": "https://github.com/itsmepvr/anki-copy-edit-run-code-from-external-editor",
+  "conflicts": []
+}
