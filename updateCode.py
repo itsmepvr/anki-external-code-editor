@@ -23,13 +23,13 @@ from PyQt5 import *
 
 browser = None
 
-
+# file name -> note_name.html
 def file_name(in_previewer):
     ankifolder = mw.pm.base
     profilename = mw.pm.name
     return Path(ankifolder) / profilename / 'collection.media' / f'{model(in_previewer)["name"]}.html'
 
-
+# get model
 def model(in_previewer):
     if in_previewer:
         card = browser._previewer.card()
@@ -39,7 +39,7 @@ def model(in_previewer):
     note = mw.col.getNote(card.nid)
     return mw.col.models.get(note.mid)
 
-
+# get state -> review/preview
 def state(in_previewer):
     if in_previewer:
         state = browser._previewer._state
