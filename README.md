@@ -15,7 +15,7 @@
 * Use addon [AnkiWebView Inspector](https://ankiweb.net/shared/info/31746032) to inspect code for any errors and issues.
 
 ### Screenshots
-<img src='./screenshots/screenshot.png' style='width:100px;height:100px' />
+<img src='./screenshots/screenshot.png' style='width:300px;height:300px' />
 
 To download and install the addon [visit here](https://ankiweb.net/shared/info/1732661953).
 
