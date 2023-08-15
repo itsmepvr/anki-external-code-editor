@@ -1,39 +1,51 @@
+# External Code Editor Addon
 
-# Copy, Edit & Run Notetype Code in Review from External Ediotr
-===============================================================
+=====================================
 
-** This is an addon for [Anki version 2.1](https://apps.ankiweb.net/). It provides Code editing and updating in review from external editor. Copy code from review to a html file, edit html file and run code in review just like a browser. Updates notetype code directly in review state. It might be useful when developing an add-on or creating complex card templates.**
+## Overview
+
+**External Code Editor** is an addon designed for [Anki version 2.1](https://apps.ankiweb.net/), offering advanced code editing and updating capabilities during card reviews. With this addon, you can seamlessly copy code from your review session to an HTML file, edit the HTML file using an external editor (such as VSCode), and run the code within the review just like a browser. This addon streamlines the process of updating code directly within the notetype, making it particularly valuable for add-on development or creating intricate card templates.
+
+## Features
+
+### Code Copy and Update
+
+-   **Copy Code (Ctrl+C):** Create an HTML file in the `collection.media` directory, copying the code from the current notetype to the HTML file.
+
+-   **Edit HTML File:** Edit the HTML file in an external editor (e.g., VSCode) to refine your code.
+
+-   **Update Code (Ctrl+S):** Transfer the updated code from the HTML file back to the notetype in the review, then reload the current card.
 
 ### Requirements
-* Supports Anki >= v2.1.20
 
-### Usage
-* Adds an item <b>Copy Code</b> & <b>Update Code</b> to the menubar in Review State.
-* Copy Code (Ctrl+C), creates a html file with profile name in collection.media and copy code of current notetype to html file. 
-* Edit html file in collection.media using any external editor(VSCode).
-* Update Code (Ctrl+S), updates code from html file to notetype in review and reloads the current card.
-* Use addon [AnkiWebView Inspector](https://ankiweb.net/shared/info/31746032) to inspect code for any errors and issues.
+-   Compatible with Anki version 2.1.20 or higher.
 
-### Screenshots
-<img src='./screenshots/screenshot.png' style='width:300px;height:300px' />
+## Usage
 
-To download and install the addon [visit here](https://ankiweb.net/shared/info/1732661953).
+1. **Menubar Integration:** Adds **Copy Code** and **Update Code** options to the menubar in the Review State, enhancing your editing experience.
 
-Works with Anki >= v2.1.20
+2. **Efficient Workflow:** Seamlessly edit and update code during your review process, ensuring smooth card template development.
 
-------
+3. **Code Inspection:** Utilize the [AnkiWebView Inspector](https://ankiweb.net/shared/info/31746032) addon to meticulously inspect your code for errors and issues.
+
+## Screenshots
+
+![Screenshot](./screenshots/screenshot.png)
+
+## Installation
+
+To download and install the addon, please visit the [AnkiWeb page](https://ankiweb.net/shared/info/1732661953).
+
+## Compatibility
+
+Works with Anki version 2.1.20 and above.
 
 ## Author
 
 **Venkata Ramana P**
 
-+ [https://itsmepvr.github.io](https://itsmepvr.github.io)
-+ [https://github.com/itsmepvr](https://github.com/itsmepvr)
-+ [https://linkedin.com/in/itsmepvr](https://linkedin.com/in/itsmepvr)
+-   [GitHub](https://github.com/itsmepvr)
 
+## Copyright and License
 
-------
-
-## Copyright and license
-
-Copyright 2019 Itsmepvr under [The MIT License (MIT)](LICENSE).
+© 2019 Itsmepvr. This project is licensed under [The MIT License (MIT)](LICENSE).
