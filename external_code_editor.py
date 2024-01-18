@@ -14,13 +14,13 @@ import os
 from pathlib import Path
 import subprocess
 import platform
+import time
 
 from anki.hooks import addHook
 from aqt import mw
 from aqt.gui_hooks import browser_will_show, webview_will_show_context_menu
 from aqt.qt import *
 from aqt.utils import tooltip
-from PyQt5 import *
 from anki import version as anki_version
 
 browser = None
@@ -45,7 +45,7 @@ def model(in_previewer):
     else:
         card = mw.reviewer.card
 
-    note = mw.col.getNote(card.nid)
+    note = mw.col.get_note(card.nid)
     return mw.col.models.get(note.mid)
 
 
@@ -73,7 +73,6 @@ def copyCode(in_previewer=False):
         htmlFile.write(source_code)
 
     tooltip('Copying current note code..')
-    mw.col.reset()
 
 
 # Update Notetype code with code from src html file
@@ -96,11 +95,10 @@ def updateCode(in_previewer=False):
         elif _state == 'answer':
             i['afmt'] = source_code
 
-    if anki_version.startswith('2.1.4'):
-        mw.col.models.save(_model)
-    else:
+    try:
         mw.col.models.update_dict(_model)
-    mw.col.reset()
+    except:
+        mw.col.models.save(_model)
 
     if in_previewer:
         browser._previewer._last_state = None
@@ -108,10 +106,8 @@ def updateCode(in_previewer=False):
     else:
         _state = state(in_previewer)
         if _state == 'question':
-            mw.moveToState('overview')
             mw.moveToState('review')
         elif _state == 'answer':
-            mw.moveToState('overview')
             mw.moveToState('review')
             mw.reviewer._showAnswer()
 
